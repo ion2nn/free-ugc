@@ -1,0 +1,20 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Imalwibest/Imalwibest/refs/heads/main/Fluxus%20Ui.lib"))()
+local Window = lib:CreateWindow("Pull a Friend [2 Players] [🎃HALLOWEEN]")
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:AddSection("lol idk")
+MainSection:AddButton("Instant UGC", "This is a button", function()
+local player = game.Players.LocalPlayer
+local character = player.Character
+local positions = {
+    Vector3.new(303, 1376, 56),
+    Vector3.new(303, 1446, 123),
+    Vector3.new(291, 1511, 60),
+    Vector3.new(303, 1567, 123)
+}
+
+for _, pos in ipairs(positions) do
+    character:PivotTo(CFrame.new(pos))
+    wait(1)
+end
+print("Button Clicked!")
+end)
